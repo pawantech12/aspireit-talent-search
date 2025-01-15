@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @font-face {
+    font-family: "semibold";
+    src: url("./Fonts/otf/SFNSDisplay-Semibold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "medium";
+    src: url("./Fonts/otf/SFNSDisplay-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "bold";
+    src: url("./Fonts/otf/SFNSText-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "light";
+    src: url("./Fonts/otf/SFNSText-Light.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "regular";
+    src: url("./Fonts/otf/SFNSText-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "regular3";
+    src: url("./Fonts/otf/SFNSText-RegularG3.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
