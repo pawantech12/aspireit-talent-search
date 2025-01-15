@@ -42,7 +42,7 @@ const App = () => {
         {/* Navbar */}
         <Navbar assistant={Liyla} onLiylaActivate={toggleLiylaStatus} />
         <main className="bg-[#464646] h-screen w-full flex justify-center items-center">
-          <div className="w-1/2">
+          <div className="">
             <div className={`relative w-[780px]  `}>
               <div className="absolute inset-0 overflow-hidden rounded-full">
                 <div
