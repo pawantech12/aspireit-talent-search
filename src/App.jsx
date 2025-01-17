@@ -41,9 +41,10 @@ const App = () => {
       <JobProvider>
         {/* Navbar */}
         <Navbar assistant={Liyla} onLiylaActivate={toggleLiylaStatus} />
-        <main className="bg-[#464646] h-screen w-full flex justify-center items-center">
-          <div className="">
-            <div className={`relative w-[780px]  `}>
+        <main className="bg-[#464646] h-screen w-full flex justify-center">
+          <div className="mt-16">
+            <div className="w-[240px] h-[240px] bg-custom-gradient shadow-[0px_0px_8px_0px_#00000040] mx-auto my-5 rounded-full blur-[20px]"></div>
+            <div className={`relative w-[780px]  mt-10`}>
               <div className="absolute inset-0 overflow-hidden rounded-full">
                 <div
                   ref={gradientRef}

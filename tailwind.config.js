@@ -7,6 +7,8 @@ export default {
         "custom-gradient":
           "conic-gradient(from 180deg at 50% 50%, #002DBF 0deg, #4396F7 101.35deg, #FF9BD2 191.63deg, #C9FFFC 278.78deg, #002DBF 352.8deg, #002DBF 360deg)",
       },
+
+      // backdrop-filter: blur(72px)
     },
   },
 
