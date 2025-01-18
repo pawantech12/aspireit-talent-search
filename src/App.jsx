@@ -46,12 +46,12 @@ const App = () => {
         {/* Navbar */}
         <Navbar assistant={Liyla} onLiylaActivate={toggleLiylaStatus} />
         <main className="relative h-screen w-full flex justify-center">
-          <div className="mt-20 relative z-20">
+          <div className="mt-20 relative z-20 flex flex-col gap-[104px]">
             <div
-              className="w-[240px] h-[240px] bg-custom-gradient shadow-[0px_0px_8px_0px_#00000040] mx-auto my-5 rounded-full blur-[20px]"
+              className="w-[200px] h-[200px] bg-custom-gradient shadow-[0px_0px_8px_0px_#00000040] mx-auto my-5 rounded-full blur-[20px]"
               ref={circularBlurRef}
             ></div>
-            <div className={`relative w-[780px]  mt-16`}>
+            <div className={`relative w-[780px]  `}>
               <div className="absolute inset-0 overflow-hidden rounded-full">
                 <div
                   ref={gradientRef}
