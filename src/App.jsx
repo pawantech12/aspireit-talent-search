@@ -9,6 +9,7 @@ const App = () => {
   const conversation = useConversation();
   const gradientRef = useRef(null);
   const rotationRef = useRef(0);
+  const circularBlurRef = useRef(null);
   const toggleLiylaStatus = async () => {
     setLiylaStatus((prev) => !prev);
     if (!liylaStatus) {
@@ -26,6 +27,9 @@ const App = () => {
         rotationRef.current = (rotationRef.current - 0.7) % 360;
         gradientRef.current.style.transform = `translateY(10%) rotate(${rotationRef.current}deg)`;
       }
+      if (circularBlurRef.current) {
+        circularBlurRef.current.style.transform = `rotate(${rotationRef.current}deg)`; // Apply rotation to circular blur gradient
+      }
     };
 
     const animationFrame = requestAnimationFrame(function animate() {
@@ -41,10 +45,13 @@ const App = () => {
       <JobProvider>
         {/* Navbar */}
         <Navbar assistant={Liyla} onLiylaActivate={toggleLiylaStatus} />
-        <main className="bg-[#464646] h-screen w-full flex justify-center">
-          <div className="mt-16">
-            <div className="w-[240px] h-[240px] bg-custom-gradient shadow-[0px_0px_8px_0px_#00000040] mx-auto my-5 rounded-full blur-[20px]"></div>
-            <div className={`relative w-[780px]  mt-10`}>
+        <main className="relative h-screen w-full flex justify-center">
+          <div className="mt-20 relative z-20">
+            <div
+              className="w-[240px] h-[240px] bg-custom-gradient shadow-[0px_0px_8px_0px_#00000040] mx-auto my-5 rounded-full blur-[20px]"
+              ref={circularBlurRef}
+            ></div>
+            <div className={`relative w-[780px]  mt-16`}>
               <div className="absolute inset-0 overflow-hidden rounded-full">
                 <div
                   ref={gradientRef}
@@ -64,11 +71,13 @@ const App = () => {
                 <input
                   type="text"
                   placeholder="AI Engineer with score above 95"
-                  className="w-full bg-transparent border-none outline-none text-lg placeholder:text-gray-600 font-normal   text-gray-600"
+                  className="w-full bg-transparent border-none outline-none text-[18px] placeholder:text-gray-600 font-normal   text-gray-600"
                 />
               </form>
             </div>
           </div>
+          <div className="absolute inset-0 bg-[#00000033]"></div>
+          <div className="absolute inset-0 bg-[#282828]"></div>
         </main>
       </JobProvider>
     </>
